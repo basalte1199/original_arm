@@ -1,4 +1,5 @@
-#include once
+#ifndef ORIGINAL_ARM__PUBLISH_HPP_
+#define ORIGINAL_ARM__PUBLISH_HPP_
 
 #include <ros/ros.h>
 #include <sensor_msgs/JointState.h>
