@@ -26,7 +26,8 @@ rclcpp_components_register_nodes(publish "original_arm::Publish")
 ament_auto_add_executable(pub_sub_node
   src/pub_sub_node.cpp
   src/publish.cpp
-  src/subscribe.cpp)
+  src/subscribe.cpp
+  src/arm_ik_node.cpp)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
