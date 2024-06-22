@@ -1,12 +1,11 @@
 #include <ros/ros.h>
 #include <geometry_msgs/PointStamped.h>
+#include <dynamiselsdk/setposition.msg>
 #include "arm_ik.h"
 
 int main(int argc, char **argv) {
   ros::init(argc, argv, "arm_ik_node");
   ros::NodeHandle nh;
-  ros::Publisher joint_state_pub = nh.advertise<sensor_msgs::JointState>("joint_states", 1);
-  ros::Publisher point_pub = nh.advertise<geometry_msgs::PointStamped>("target_point", 1);
 
   ArmMock arm_mock(0.05, 0.05, 0.15, 0.15, 0.1);
   ArmSolver arm_solver(0.05, 0.05, 0.15, 0.15, 0.1);
